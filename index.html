@@ -45,22 +45,16 @@
       </div>
     </div>
     <script>
-      let element = document.getElementById("btn-no");
-
-      const el = document.getElementById("element");
-      el.addEventListener("mousemove", (e) => {
-
-        if (element.matches(":hover")) {
-          let btn = document.getElementById("btn-no");
-          btn.style.position = "absolute";
-          btn.style.top = `${Math.floor(Math.random() * 300)}px`;
-          btn.style.left = `${Math.floor(Math.random() * 1000)}px`;
-          btn.style.right = `${Math.floor(Math.random() * 500)}px`;;
-        
-        }
+      const element = document.getElementById("btn-no");
+        element.addEventListener("mouseenter", () => {
+        const x = Math.floor(Math.random() * window.innerWidth);
+        const y = Math.floor(Math.random() * window.innerHeight);
+        element.style.position = "absolute";
+        element.style.left = x + "px";
+        element.style.top = y + "px";
       });
 
-      function openYoutube(){
+      function openYoutube() {
         window.open("https://www.youtube.com/watch?v=orWnzqBA63w");
       }
     </script>
